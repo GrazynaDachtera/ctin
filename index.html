@@ -7,11 +7,12 @@
     <title>Leksykon Website - Dashboard</title>
   </head>
   <body>
-    <header>
+    <!--NavBar Section: 1. Logo 2. Header 3. Navigation-->
+    <header class="headerSection" aria-label="headerSection">
       <section class="lexiconNavbar">
         <div class="lexiconNavbarContent">
           <div class="lexiconNavbarContentLogo">
-            <a href="/CTIN/assets/logo.png" alt="logoLeksykon.com.pl"></a>
+            <a href="/assets/logo.png" alt="logoLeksykon.com.pl"></a>
           </div>
           <div class="lexiconNavbarContentHeading">
             <h1 class="lexiconNavbarContentHeadingTitle">
@@ -34,6 +35,28 @@
         <div class="lexiconNavbarFrame"></div>
       </section>
     </header>
+    <!--Body Left section: 1. Navigation menu 2. Hot News 3. Logout button -->
+    <aside class="leftSideBar" aria-label="leftSideBarNavigation">
+  <nav class="leftSideBarMenu">
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Produkty apteczne</a></li>
+      <li><a href="#">Substancje czynne</a></li>
+      <li><a href="#">Schorzenia</a></li>
+      <li><a href="#">Poradniki</a></li>
+      <li><a href="#">Porady dla pacjentów</a></li>
+      <li><a href="#">Kalkulatory</a></li>
+      <li><a href="#">Rejestr leków</a></li>
+      <li><a href="#">Newsy</a></li>
+    </ul>
+  </nav>
+
+  <section class="leftSideBarNews" aria-label="leftSideBarHotNews">
+  </section>
+  <section class="leftSideBarLogout" aria-label="leftSideBarLogout">
+    <button type="submit" aria-label="logoutButton">Logout</button>
+  </section>
+</aside>
     <script src="script.js"></script>
   </body>
 </html>
