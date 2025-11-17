@@ -129,7 +129,6 @@
     </aside>
     <!--Main center section: 1. Search bar 2. Articles 3. Dosage and Interactions 4. Bottom Banner-->
     <main class="centerBar" aria-label="centerBarSection">
-      <!-- Search Section -->
       <section class="centerBarSearch" aria-label="searchBarSection">
         <form class="searchBar" role="search">
           <button class="searchBarIcon" type="submit" aria-label="Szukaj">
@@ -145,7 +144,6 @@
         </form>
       </section>
 
-      <!-- Articles Section -->
       <section class="centerBarArticles" aria-label="centerBarArticlesSection">
         <header class="articlesHeader">
           <div class="articlesHeaderTitle">
@@ -163,9 +161,8 @@
             type="button"
             aria-label="Więcej opcji dla artykułów"
           >
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <span class="dot"></span><span class="dot"></span
+            ><span class="dot"></span>
           </button>
         </header>
 
@@ -179,7 +176,6 @@
         </nav>
 
         <div class="articlesGrid">
-          <!-- Left Column -->
           <div class="articlesColumn">
             <article class="articleCard articleCardLarge">
               <a href="##" class="articleCardLink">
@@ -233,7 +229,6 @@
             </article>
           </div>
 
-          <!-- Right Column -->
           <div class="articlesColumn">
             <article class="articleCard articleCardLarge">
               <a href="##" class="articleCardLink">
@@ -273,7 +268,7 @@
               <a href="##" class="articleCardLink">
                 <div class="articleCardThumbnail">
                   <img
-                    src="assets/thumbnails/5.png"
+                    src="assets/thumbnails/6.png"
                     alt="Nowe leki w 2025 roku – jakie zmiany czekają pacjentów?"
                   />
                 </div>
@@ -289,9 +284,7 @@
         </div>
       </section>
 
-      <!-- Dosage & Interactions Section -->
       <section class="centerBarOther" aria-label="dosageAndInteractions">
-        <!-- Dosage -->
         <div class="dosageBar">
           <header class="sectionHeader">
             <h2 class="sectionHeaderTitle">Dawkowanie</h2>
@@ -317,14 +310,18 @@
           <div class="infoCard infoCardDosage">
             <div class="infoCardTop">
               <div class="infoCardIcon">
-                <img src="" alt="" aria-hidden="true" />
+                <img
+                  src="assets/8.png"
+                  alt="Sprawdź dawkowanie"
+                  aria-hidden="true"
+                />
               </div>
               <p class="infoCardTitle">Sprawdź dawkowanie</p>
             </div>
 
             <form class="infoCardSearch" role="search">
               <span class="infoCardSearchIcon" aria-hidden="true">
-                <img src="" alt="" />
+                <img src="assets/11.png" alt="Wpisz nazwę leku" />
               </span>
               <input
                 type="search"
@@ -336,7 +333,6 @@
           </div>
         </div>
 
-        <!-- Interactions -->
         <div class="interactionsBar">
           <header class="sectionHeader">
             <h2 class="sectionHeaderTitle">Interakcje</h2>
@@ -353,8 +349,8 @@
             <div class="infoCardTop">
               <div class="infoCardIcon">
                 <img
-                  src="assets/icons/interactions.svg"
-                  alt=""
+                  src="assets/7.png"
+                  alt="Sprawdź interakcje"
                   aria-hidden="true"
                 />
               </div>
@@ -363,7 +359,7 @@
 
             <form class="infoCardSearch" role="search">
               <span class="infoCardSearchIcon">
-                <img src="assets/icons/search.svg" alt="" />
+                <img src="assets/11.png" alt="Wpisz nazwę leku" />
               </span>
               <input
                 type="search"
@@ -376,10 +372,9 @@
         </div>
       </section>
 
-      <!-- Bottom Banner -->
       <section class="centerBarBanner" aria-label="promoBanner">
         <img
-          src="assets/banner/lekoludki.png"
+          src="assets/bannery/2.png"
           alt="Poznaj drużynę Lekoludków #LekiPoLudzku"
         />
       </section>
@@ -387,26 +382,100 @@
 
     <!--Aside right section: 1. Search bar 2. Calculator 3. Other articles 4. First banner 5. Second banner -->
     <aside class="rightSideBar" aria-label="rightSideBar">
-      <section
-        class="rightSideBarSearch"
-        aria-label="rightSideBarSearch"
-      ></section>
+      <section class="rightSideBarSearch" aria-label="rightSideBarSearch">
+        <form class="rightSidesearchBar" role="search">
+          <button
+            class="rightSidesearchBarIcon"
+            type="submit"
+            aria-label="Szukaj"
+          >
+            <img src="assets/2.png" alt="search icon" aria-hidden="true" />
+          </button>
+          <input
+            class="rightSidesearchBarInput"
+            type="search"
+            name="DatabaseSearch"
+            placeholder="Wyszukaj w bazie"
+            aria-label="Wyszukaj w bazie"
+          />
+          <button
+            class="rightSidesearchBarSelect"
+            type="button"
+            aria-label="Baza ChPL"
+          >
+            Baza ChPL ▾
+          </button>
+        </form>
+      </section>
+
       <section
         class="rightSideBarCalculator"
         aria-label="rightSideBarCalculator"
-      ></section>
+      >
+        <header class="rightSideCardHeader">
+          <h3 class="rightSideCardTitle">Mój kalkulator</h3>
+          <button
+            class="rightSideCardMenu"
+            type="button"
+            aria-label="Więcej opcji"
+          >
+            <span class="dot"></span><span class="dot"></span
+            ><span class="dot"></span>
+          </button>
+        </header>
+        <div class="calcCard">
+          <label class="calcLabel">Masa ciała dziecka</label>
+          <div class="calcField">
+            <input
+              class="calcInput"
+              type="number"
+              value="24"
+              aria-label="Masa ciała dziecka"
+            />
+            <span class="calcUnit">kg</span>
+          </div>
+          <label class="calcLabel">Wybierz lek</label>
+          <div class="calcSelectWrap">
+            <select class="calcSelect" aria-label="Wybierz lek">
+              <option>Paracetamol Hasco (120 mg/5 ml)</option>
+              <option>Ibuprofen (100 mg/5 ml)</option>
+            </select>
+            <button class="calcChevron" type="button" aria-label="Rozwiń">
+              ▾
+            </button>
+          </div>
+          <button class="calcButton" type="button">Oblicz</button>
+        </div>
+      </section>
+
       <section
         class="rightSideBarOtherArticles"
         aria-label="rightSideBarOtherArticles"
-      ></section>
+      >
+        <div class="chipsScroller">
+          <button class="chip">Sposób na wszy</button>
+          <button class="chip">Odporność dziecka</button>
+          <button class="chip">Witaminy</button>
+          <button class="chip">Alergie</button>
+          <button class="chip">Przeziębienie</button>
+          <button class="chip">Kaszel</button>
+        </div>
+        <button class="chipsNext" type="button" aria-label="dalej">▸</button>
+      </section>
+
       <section
         class="rightSideBarFirstBanner"
         aria-label="rightSideBarFirstBanner"
-      ></section>
+      >
+        <img src="assets/bannery/3.png" alt="leki po ludzku banner" />
+      </section>
+
       <section
         class="rightSideBarSecondBanner"
         aria-label="rightSideBarSecondBanner"
-      ></section>
+      >
+        <img src="assets/bannery/4.png" alt="strefa leków" />
+      </section>
     </aside>
     <script src="script.js"></script>
   </body>
