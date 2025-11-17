@@ -10,6 +10,18 @@
   padding: 0;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   min-height: 100vh;
   display: grid;
@@ -18,18 +30,19 @@ body {
   grid-template-areas:
     "header header header"
     "left   main   right";
-  background-color: #f4faf8;
+  background: #f4faf8;
   font-family: "Poppins", sans-serif;
+  gap: 0;
 }
 
+/* header */
 .headerBar {
   grid-area: header;
-  background-color: #f4faf8;
+  background: #f4faf8;
 }
-
 .lexiconNavbar {
   margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 2rem;
 }
 .lexiconNavbarContent {
   display: flex;
@@ -37,12 +50,12 @@ body {
   justify-content: space-between;
 }
 .lexiconNavbarContentHeading {
-  margin-left: 1.5rem;
+  margin-left: 1.2rem;
 }
 .lexiconNavbarContentHeadingTitle {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  line-height: 1.1;
 }
 .lexiconNavbarContentHeadingSubtitle {
   font-size: 0.875rem;
@@ -55,13 +68,13 @@ body {
 }
 .lexiconNavbarContentMenu button {
   border: none;
-  background: #ffffff;
+  background: #fff;
   border-radius: 999rem;
-  padding: 0.625rem 0.75rem;
+  padding: 0.6rem 0.75rem;
   cursor: pointer;
 }
 .lexiconNavbarFrame {
-  height: 0.1rem;
+  height: 0.15rem;
   margin-top: 0.75rem;
   border-radius: 999rem 999rem 0 0;
   background: linear-gradient(
@@ -81,13 +94,14 @@ body {
   );
 }
 
+/* left aside */
 .leftSideBar {
   grid-area: left;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
-  padding: 3.5rem 2rem;
+  padding: 2.5rem 1.6rem;
   background: #f4faf8;
 }
 .leftSideBarMenu ul {
@@ -101,7 +115,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  padding: 0.95rem 1.15rem;
+  padding: 0.95rem 1.1rem;
   border: none;
   border-radius: 999rem;
   background: transparent;
@@ -109,16 +123,15 @@ body {
   font: inherit;
   font-size: 0.98rem;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s;
 }
 .leftSideBarMenu img {
   width: 1.4rem;
   height: 1.4rem;
   object-fit: contain;
-  flex: 0 0 auto;
 }
 .leftSideBarMenu li:first-child button {
-  background: #ffffff;
+  background: #fff;
   color: #0f6570;
   box-shadow: 0 0.6rem 1.6rem rgba(3, 86, 72, 0.08);
 }
@@ -129,7 +142,6 @@ body {
   margin-top: 2rem;
 }
 .leftSideBarNews img {
-  display: block;
   width: 100%;
   border-radius: 1.25rem;
   box-shadow: 0 1.1rem 2.2rem rgba(3, 86, 72, 0.1);
@@ -155,16 +167,18 @@ body {
   font-size: 0.92rem;
 }
 
+/* center */
 .centerBar {
+  grid-area: main;
   background: #f3fbf9;
-  padding: 1.5rem 2rem 2rem;
+  padding: 1.25rem 2rem 2rem;
 }
 .centerBarSearch {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   padding: 0.3rem;
   border-radius: 999rem;
-  background: #ffffff;
-  border: 1px solid #e0f2ef;
+  background: #fff;
+  border: 0.0625rem solid #e0f2ef;
   box-shadow: 0 1.1rem 2.4rem rgba(3, 86, 72, 0.08);
 }
 .centerBarSearch .searchBar {
@@ -174,7 +188,7 @@ body {
   border-radius: 999rem;
   padding: 0.75rem 1.5rem;
   background: linear-gradient(180deg, #f4fdfb 0%, #e7f7f3 100%);
-  border: 1px solid rgba(178, 215, 208, 0.85);
+  border: 0.0625rem solid rgba(178, 215, 208, 0.85);
   box-shadow: inset 0 0.05rem 0 rgba(255, 255, 255, 0.9);
 }
 .searchBarIcon {
@@ -187,7 +201,6 @@ body {
   border: none;
   background: transparent;
   margin-right: 0.75rem;
-  padding: 0;
 }
 .searchBarIcon img {
   width: 1.15rem;
@@ -199,7 +212,7 @@ body {
   border: none;
   outline: none;
   background: transparent;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #4b5a5a;
 }
 .searchBarInput::placeholder {
@@ -207,21 +220,21 @@ body {
 }
 
 .centerBarArticles {
-  background: #ffffff;
+  background: #fff;
   border-radius: 1.5rem;
-  padding: 1.5rem 1.5rem 1.75rem;
+  padding: 1.4rem 1.4rem 1.6rem;
   border: 0.0625rem solid #e4f0ef;
   box-shadow: 0 0.875rem 2rem rgba(3, 86, 72, 0.06);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 .articlesHeader {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.125rem;
+  margin-bottom: 1rem;
 }
 .articlesHeaderTitleH2 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #083f3b;
 }
 .articlesTabs {
@@ -229,18 +242,20 @@ body {
   gap: 1.5rem;
   border-bottom: 0.0625rem solid #e4f0ef;
   padding-bottom: 0.25rem;
+  overflow-x: auto;
 }
 .articlesTabsItem {
   border: none;
   background: transparent;
   padding-bottom: 0.75rem;
-  font-size: 0.8125rem;
+  font-size: 0.82rem;
   cursor: pointer;
   color: #7e8f92;
+  white-space: nowrap;
 }
 .articlesTabsItemActive {
   color: #06b7a1;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
 }
 .articlesTabsItemActive::after {
@@ -254,10 +269,10 @@ body {
   border-radius: 999rem;
 }
 .articlesGrid {
-  margin-top: 1.25rem;
+  margin-top: 1.1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem 1.75rem;
+  gap: 1.1rem 1.5rem;
 }
 .articlesColumn {
   display: flex;
@@ -265,7 +280,7 @@ body {
   gap: 0.75rem;
 }
 .articleCard {
-  background: #ffffff;
+  background: #fff;
   border-radius: 1.25rem;
   border: 1px solid #e6f0ef;
   box-shadow: 0 14px 28px rgba(3, 86, 72, 0.05);
@@ -330,7 +345,7 @@ body {
   margin-bottom: 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.375rem;
+  gap: 1.25rem;
 }
 .sectionHeader {
   display: flex;
@@ -339,7 +354,7 @@ body {
 }
 .sectionHeaderTitle {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #083f3b;
 }
 .sectionHeaderActions {
@@ -349,7 +364,7 @@ body {
 .infoCard {
   border-radius: 1.375rem;
   padding: 1rem 1.125rem 1.125rem;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #f3ece4;
   box-shadow: 0 12px 24px rgba(3, 86, 72, 0.05);
 }
@@ -362,7 +377,7 @@ body {
 .infoCardIcon {
   width: 2rem;
   height: 2rem;
-  background: #ffffff;
+  background: #fff;
   border-radius: 0.875rem;
   display: flex;
   align-items: center;
@@ -390,32 +405,34 @@ body {
   font-size: 0.8rem;
   color: #586a6d;
 }
+
 .centerBarBanner img {
   width: 100%;
   border-radius: 1.4rem;
   box-shadow: 0 18px 32px rgba(3, 86, 72, 0.06);
 }
 
+/* right aside */
 .rightSideBar {
   grid-area: right;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-self: start;
 }
-
 .rightSideBarSearch {
-  background-color: #f4fbfb;
+  background: #f4fbfb;
   border-radius: 999rem;
   box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.06);
-  padding: 0.6rem;
+  padding: 0.45rem;
   border: 0.0625rem solid #def0ee;
 }
 .rightSidesearchBar {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.4rem 0.6rem;
+  padding: 0.35rem 0.5rem;
   border-radius: 999rem;
   background: linear-gradient(180deg, #f4fdfb 0%, #e7f7f3 100%);
 }
@@ -427,7 +444,7 @@ body {
   height: 2.4rem;
   border-radius: 999rem;
   border: none;
-  background-color: #00a2af;
+  background: #00a2af;
   cursor: pointer;
 }
 .rightSidesearchBarIcon img {
@@ -437,32 +454,32 @@ body {
 .rightSidesearchBarInput {
   flex: 1;
   border: none;
-  background-color: #ffffff;
-  padding: 0.8rem 1rem;
+  background: #fff;
+  padding: 0.75rem 1rem;
   border-radius: 999rem;
   font-size: 0.95rem;
   outline: none;
 }
 .rightSidesearchBarSelect {
   border: none;
-  background: #ffffff;
+  background: #fff;
   border-radius: 999rem;
-  padding: 0.8rem 1rem;
+  padding: 0.75rem 1rem;
   font-size: 0.9rem;
   color: #0f6570;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .rightSideBarCalculator {
-  background: transparent;
   padding: 0;
+  margin-top: 0.25rem;
 }
 .rightSideCardHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
+  margin: 0.4rem 0 0.6rem;
 }
 .rightSideCardTitle {
   font-size: 1.1rem;
@@ -482,26 +499,25 @@ body {
   border-radius: 50%;
   margin-left: 0.2rem;
 }
-
 .calcCard {
-  background: #ffffff;
+  background: #fff;
   border: 0.0625rem solid #e7f0ee;
   border-radius: 1.1rem;
-  padding: 1.25rem;
+  padding: 1.1rem;
   box-shadow: 0 1.2rem 2rem rgba(3, 86, 72, 0.06);
 }
 .calcLabel {
   display: block;
   font-size: 0.85rem;
   color: #5e6e71;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 .calcField {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 0.5rem;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 .calcInput {
   width: 100%;
@@ -525,7 +541,6 @@ body {
   font-size: 0.9rem;
 }
 .calcSelectWrap {
-  position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 0.5rem;
@@ -555,7 +570,7 @@ body {
   width: 7.5rem;
   border: none;
   background: #0ea09f;
-  color: #ffffff;
+  color: #fff;
   font-weight: 600;
   padding: 0.7rem 1rem;
   border-radius: 999rem;
@@ -564,7 +579,7 @@ body {
 
 .rightSideBarOtherArticles {
   position: relative;
-  padding-top: 0.5rem;
+  padding-top: 0.4rem;
 }
 .chipsScroller {
   display: grid;
@@ -572,13 +587,13 @@ body {
   grid-auto-columns: max-content;
   gap: 0.6rem;
   overflow-x: auto;
-  padding: 0.4rem 0.2rem 0.6rem;
+  padding: 0.35rem 0.2rem 0.55rem;
   scroll-snap-type: x mandatory;
 }
 .chip {
   scroll-snap-align: start;
   border: 0.0625rem solid #e4efee;
-  background: #ffffff;
+  background: #fff;
   border-radius: 999rem;
   padding: 0.6rem 1rem;
   font-size: 0.85rem;
@@ -587,13 +602,13 @@ body {
 }
 .chipsNext {
   position: absolute;
-  right: 0.4rem;
+  right: 0.35rem;
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  background: #ffffff;
+  background: #fff;
   border-radius: 999rem;
-  padding: 0.4rem 0.7rem;
+  padding: 0.35rem 0.65rem;
   box-shadow: 0 0.6rem 1.2rem rgba(3, 86, 72, 0.12);
   cursor: pointer;
 }
@@ -602,36 +617,88 @@ body {
 .rightSideBarSecondBanner img {
   width: 100%;
   height: auto;
-  display: block;
   border-radius: 1.2rem;
   box-shadow: 0 1.4rem 2.4rem rgba(3, 86, 72, 0.08);
 }
 
-@media (max-width: 70rem) {
+/* responsive */
+@media (max-width: 1240px) {
+  body {
+    grid-template-columns: 16rem minmax(0, 1fr) 20rem;
+  }
+  .centerBar {
+    padding: 1rem 1.2rem 1.5rem;
+  }
+  .articlesGrid {
+    gap: 1rem 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    grid-template-columns: 14rem minmax(0, 1fr) 19rem;
+  }
+  .articlesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .centerBarOther {
+    grid-template-columns: 1fr 1fr;
+  }
   .rightSidesearchBarSelect {
     display: none;
   }
 }
 
-@media (max-width: 56rem) {
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "right"
+      "main"
+      "left";
+  }
+  .leftSideBar,
+  .rightSideBar,
   .centerBar {
     padding: 1rem;
   }
-  .articlesGrid,
+  .rightSideBar {
+    gap: 1rem;
+  }
+  .centerBarArticles {
+    margin-bottom: 1rem;
+  }
+  .articlesGrid {
+    grid-template-columns: 1fr;
+  }
   .centerBarOther {
     grid-template-columns: 1fr;
   }
-  .leftSideBar {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: auto;
+}
+
+@media (max-width: 560px) {
+  :root {
+    font-size: 15px;
   }
-  .rightSideBar {
+  .lexiconNavbar {
+    padding: 0.9rem 1rem;
+  }
+  .lexiconNavbarContentHeadingTitle {
+    font-size: 1.4rem;
+  }
+  .leftSideBar {
+    gap: 1.25rem;
     padding: 1rem;
   }
-  .rightSidesearchBarInput {
+  .leftSideBarNews {
+    margin-top: 1rem;
+  }
+  .rightSideCardTitle {
     font-size: 1rem;
+  }
+  .calcButton {
+    width: 100%;
   }
   .chipsNext {
     display: none;
