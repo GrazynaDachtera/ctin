@@ -28,9 +28,8 @@ body {
 }
 
 .lexiconNavbar {
-  max-width: 75rem;
   margin: 0 auto;
-  padding: 1rem 2rem 0.5rem;
+  padding: 1.5rem 2rem;
 }
 
 .lexiconNavbarContent {
@@ -91,4 +90,23 @@ body {
     #2f7de1 92%,
     #2f7de1 100%
   );
+}
+
+.leftSideBar {
+  grid-area: left;
+  padding: 4rem 2rem;
+  background-color: #f4faf8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leftSideBarMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 0.75rem;
 }
