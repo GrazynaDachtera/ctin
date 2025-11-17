@@ -1,0 +1,24 @@
+Zadanie polega na zakodowaniu podanego widoku z pliku "preview.png" do struktury HTML/CSS/JS dla widoku desktop.
+
+Element zawierający 6 kropek (w domyśle: uchwyt do przenoszenia modułów) może zostać pominięty podczas kodowania.
+
+Ważne informacje na temat wykonywania prac:
+
+Nagłówek:
+* Trzeba zakodowac wielokolorową ramkę znajdującą się na dole nagłówka 
+
+Lewa kolumna:
+* Menu + banner graficzny
+
+Środkowa kolumna:
+* Ważne jest aby zakładki w dziale "najnowsze artykuły" były funkcjonalne - treść dalszych zakładek może być powielona.
+* Reszta modułów to proste formularze/banner graficzny
+
+Prawy sidebar:
+* Moduł "Wyszukaj w bazie" to ostylowany formularz z input type search + select.
+* Moduł "Mój kalkulator" to prosty formularz
+* Moduł z poziomą listą pozycji (pod "Mój kalkulator") musi się przewijać prawo <-> lewo.
+* Poniżej dwa bannery graficzne
+
+Zadanie dodatkowe:
+* Z podanego widoku typu desktop zrobić widok dobrze wyglądający na urządzeniach mobilnych typu telefon w orientacji pionowej.
