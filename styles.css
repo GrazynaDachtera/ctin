@@ -120,6 +120,7 @@ body {
   color: #4a5b67;
   font: inherit;
   font-size: 0.98rem;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
   white-space: nowrap;
@@ -194,8 +195,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.6rem;
+  height: 2.6rem;
   border-radius: 50%;
   border: none;
   background: transparent;
