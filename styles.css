@@ -1,0 +1,94 @@
+:root {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 18rem minmax(0, 1fr) 22rem;
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas:
+    "header header header"
+    "left   main   right";
+  background-color: #f4faf8;
+  font-family: "Poppins", sans-serif;
+}
+
+.headerBar {
+  grid-area: header;
+  background-color: #f4faf8;
+}
+
+.lexiconNavbar {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem 0.5rem;
+}
+
+.lexiconNavbarContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lexiconNavbarContentLogo a {
+  display: inline-flex;
+}
+
+.lexiconNavbarContentHeading {
+  margin-left: 1.5rem;
+}
+
+.lexiconNavbarContentHeadingTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.lexiconNavbarContentHeadingSubtitle {
+  font-size: 0.875rem;
+  color: #7f9da0;
+}
+
+.lexiconNavbarContentMenu ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.lexiconNavbarContentMenu button {
+  border: none;
+  background: #ffffff;
+  border-radius: 999rem;
+  padding: 0.625rem 0.75rem;
+  cursor: pointer;
+}
+
+.lexiconNavbarFrame {
+  height: 0.1rem;
+  margin-top: 0.75rem;
+  border-radius: 999rem 999rem 0 0;
+  background: linear-gradient(
+    to right,
+    #17b5b5 0%,
+    #17b5b5 62%,
+    #f6a623 62%,
+    #f6a623 70%,
+    #17b5b5 70%,
+    #17b5b5 76%,
+    #f35b55 76%,
+    #f35b55 84%,
+    #5bbf63 84%,
+    #5bbf63 92%,
+    #2f7de1 92%,
+    #2f7de1 100%
+  );
+}

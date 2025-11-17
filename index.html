@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css"
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Leksykon Website - Dashboard</title>
   </head>
   <body>
@@ -12,23 +18,41 @@
       <section class="lexiconNavbar">
         <div class="lexiconNavbarContent">
           <div class="lexiconNavbarContentLogo">
-            <a href="/assets/logo.png" alt="logoLeksykon.com.pl"></a>
+            <img src="assets/logo.png" alt="logo Leksykon.com.pl" />
           </div>
           <div class="lexiconNavbarContentHeading">
-            <h1 class="lexiconNavbarContentHeadingTitle">
-              Witaj, XYZ
-            </h1>
+            <h1 class="lexiconNavbarContentHeadingTitle">Witaj, Aleksander</h1>
             <p class="lexiconNavbarContentHeadingSubtitle">
               Dashboard specjalisty
             </p>
           </div>
           <div class="lexiconNavbarContentMenu">
             <ul>
-              <li><button type="button" aria-label="SearchButton">Szukaj</button></li>
-              <li><button type="button" aria-label="MessageButton">Wiadomości</button></li>
-              <li><button type="button" aria-label="NotificationsButton">Powiadomienia</button></li>
-              <li><button type="button" aria-label="ModulesButton">Moduły</button></li>
-              <li><button type="button" aria-label="UserProfileButton">Profil użytkownika</button></li>
+              <li>
+                <button type="button" aria-label="SearchButton">
+                  <img src="/assets/5.png" alt="search icon" />
+                </button>
+              </li>
+              <li>
+                <button type="button" aria-label="MessageButton">
+                  <img src="/assets/4.png" alt="message icon" />
+                </button>
+              </li>
+              <li>
+                <button type="button" aria-label="NotificationsButton">
+                  <img src="/assets/3.png" alt="notifications icon" />
+                </button>
+              </li>
+              <li>
+                <button type="button" aria-label="ModulesButton">
+                  <img src="" alt="module icon" />
+                </button>
+              </li>
+              <li>
+                <button type="button" aria-label="UserProfileButton">
+                  <img src="/assets/9.png" alt="user icon" />
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -37,55 +61,67 @@
     </header>
     <!--Aside Left section: 1. Navigation menu 2. Hot News 3. Logout button -->
     <aside class="leftSideBar" aria-label="leftSideBar">
-  <nav class="leftSideBarMenu">
-    <ul>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Produkty apteczne</a></li>
-      <li><a href="#">Substancje czynne</a></li>
-      <li><a href="#">Schorzenia</a></li>
-      <li><a href="#">Poradniki</a></li>
-      <li><a href="#">Porady dla pacjentów</a></li>
-      <li><a href="#">Kalkulatory</a></li>
-      <li><a href="#">Rejestr leków</a></li>
-      <li><a href="#">Newsy</a></li>
-    </ul>
-  </nav>
+      <nav class="leftSideBarMenu">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Produkty apteczne</a></li>
+          <li><a href="#">Substancje czynne</a></li>
+          <li><a href="#">Schorzenia</a></li>
+          <li><a href="#">Poradniki</a></li>
+          <li><a href="#">Porady dla pacjentów</a></li>
+          <li><a href="#">Kalkulatory</a></li>
+          <li><a href="#">Rejestr leków</a></li>
+          <li><a href="#">Newsy</a></li>
+        </ul>
+      </nav>
 
-  <section class="leftSideBarNews" aria-label="leftSideBarHotNews">
-  </section>
-  <section class="leftSideBarLogout" aria-label="leftSideBarLogout">
-    <button type="submit" aria-label="logoutButton">Logout</button>
-  </section>
-</aside>
-<!--Main center section: 1. Search bar 2. Articles 3. Dosage and Interactions 4. Bottom Banner-->
-<main class="centerBar" aria-label="centerBarSection">
-<section class="centerBarsearch" aria-label="searchBarSection">
-
-</section>
-<section class="centerBarArticles" aria-label="centerBarArticlesSection">
-
-</section>
-<section class="centerBarOther" aria-label="dosageAndInteractions">
-  <div class="dosageBar">
-
-  </div>
-  <div class="interactionsBar">
-
-  </div>
-</section>
-<section class="centerBarBottomBanner" aria-label="bottomBanner">
-
-</section>
-</main>
-<!--Aside right section: 1. Search bar 2. Calculator 3. Other articles 4. First banner 5. Second banner -->
-<aside class="rightSideBar" aria-label="rightSideBar">
-  <section class="rightSideBarSearch" aria-label="rightSideBarSearch">
-</section>
-<section class="rightSideBarCalculator" aria-label="rightSideBarCalculator"></section>
-<section class="rightSideBarOtherArticles" aria-label="rightSideBarOtherArticles"></section>
-<section class="rightSideBarFirstBanner" aria-label="rightSideBarFirstBanner"></section>
-<section class="rightSideBarSecondBanner" aria-label="rightSideBarSecondBanner"></section>
-</aside>
+      <section
+        class="leftSideBarNews"
+        aria-label="leftSideBarHotNews"
+      ></section>
+      <section class="leftSideBarLogout" aria-label="leftSideBarLogout">
+        <button type="submit" aria-label="logoutButton">Logout</button>
+      </section>
+    </aside>
+    <!--Main center section: 1. Search bar 2. Articles 3. Dosage and Interactions 4. Bottom Banner-->
+    <main class="centerBar" aria-label="centerBarSection">
+      <section class="centerBarsearch" aria-label="searchBarSection"></section>
+      <section
+        class="centerBarArticles"
+        aria-label="centerBarArticlesSection"
+      ></section>
+      <section class="centerBarOther" aria-label="dosageAndInteractions">
+        <div class="dosageBar"></div>
+        <div class="interactionsBar"></div>
+      </section>
+      <section
+        class="centerBarBottomBanner"
+        aria-label="bottomBanner"
+      ></section>
+    </main>
+    <!--Aside right section: 1. Search bar 2. Calculator 3. Other articles 4. First banner 5. Second banner -->
+    <aside class="rightSideBar" aria-label="rightSideBar">
+      <section
+        class="rightSideBarSearch"
+        aria-label="rightSideBarSearch"
+      ></section>
+      <section
+        class="rightSideBarCalculator"
+        aria-label="rightSideBarCalculator"
+      ></section>
+      <section
+        class="rightSideBarOtherArticles"
+        aria-label="rightSideBarOtherArticles"
+      ></section>
+      <section
+        class="rightSideBarFirstBanner"
+        aria-label="rightSideBarFirstBanner"
+      ></section>
+      <section
+        class="rightSideBarSecondBanner"
+        aria-label="rightSideBarSecondBanner"
+      ></section>
+    </aside>
     <script src="script.js"></script>
   </body>
 </html>
