@@ -110,3 +110,64 @@ body {
   flex-direction: column;
   gap: 0.75rem;
 }
+
+.leftSideBarMenu button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: none;
+  background: transparent;
+  border-radius: 999rem;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  color: #4a5b67;
+  cursor: pointer;
+}
+
+.leftSideBarMenu img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.leftSideBarMenu li:first-child button {
+  background-color: #ffffff;
+  color: #0f6570;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.06);
+}
+
+.leftSideBarMenu button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.leftSideBarNews {
+  margin-top: 2rem;
+}
+
+.leftSideBarNews img {
+  display: block;
+  width: 100%;
+  border-radius: 1.25rem;
+}
+
+.leftSideBar > button {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: #1a9e9f;
+  cursor: pointer;
+}
+
+.leftSideBar > button img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.leftSideBar > button span {
+  font-size: 0.9rem;
+}
