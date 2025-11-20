@@ -182,7 +182,7 @@ body {
 }
 
 .leftSideBarNews img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 1.25rem;
 }
 
@@ -937,7 +937,7 @@ body {
   }
 
   .leftSideBarNews img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
