@@ -935,6 +935,10 @@ body {
   .sectionHeaderArrow {
     display: inline-flex;
   }
+
+  .leftSideBarNews img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -966,5 +970,33 @@ body {
   .centerBarOther {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .articlesTabs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    overflow-x: visible;
+    border-bottom: none;
+  }
+
+  .articlesTabsItem {
+    white-space: normal;
+    padding-bottom: 0;
+  }
+  .chipsScroller {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-x: visible;
+    overflow-y: visible;
+    scroll-snap-type: none;
+  }
+
+  .chip {
+    white-space: normal;
+    width: 100%;
   }
 }
