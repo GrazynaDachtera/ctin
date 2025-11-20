@@ -47,10 +47,11 @@ body {
 
 .lexiconNavbarContent {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "logo menu"
-    "heading heading";
+    "logo"
+    "heading"
+    "menu";
   align-items: center;
   column-gap: 0.75rem;
   row-gap: 0.5rem;
@@ -67,7 +68,7 @@ body {
 
 .lexiconNavbarContentMenu {
   grid-area: menu;
-  justify-self: end;
+  justify-self: flex-start;
 }
 
 .lexiconNavbarContentHeadingTitle {
