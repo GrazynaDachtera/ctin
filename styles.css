@@ -12,7 +12,7 @@
 
 html,
 body {
-  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -23,13 +23,15 @@ img {
 }
 
 body {
-  min-height: 100vh;
+  height: auto;
   display: grid;
-  grid-template-columns: 18rem minmax(0, 1fr) 22rem;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
-    "header header header"
-    "left   main   right";
+    "header"
+    "main"
+    "right"
+    "left";
   background: #f4faf8;
   font-family: "Poppins", sans-serif;
   gap: 0;
@@ -40,36 +42,56 @@ body {
   background: #f4faf8;
 }
 .lexiconNavbar {
-  margin: 0 auto;
-  padding: 1.2rem 2rem;
+  padding: 0.75rem 1rem;
 }
+
 .lexiconNavbarContent {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "logo menu"
+    "heading heading";
   align-items: center;
-  justify-content: space-between;
+  column-gap: 0.75rem;
+  row-gap: 0.5rem;
 }
+
+.lexiconNavbarContentLogo {
+  grid-area: logo;
+}
+
 .lexiconNavbarContentHeading {
-  margin-left: 1.2rem;
+  grid-area: heading;
+  margin-left: 0;
 }
+
+.lexiconNavbarContentMenu {
+  grid-area: menu;
+  justify-self: end;
+}
+
 .lexiconNavbarContentHeadingTitle {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.2;
 }
+
 .lexiconNavbarContentHeadingSubtitle {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #7f9da0;
 }
+
 .lexiconNavbarContentMenu ul {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
   list-style: none;
 }
+
 .lexiconNavbarContentMenu button {
   border: none;
   background: #fff;
   border-radius: 999rem;
-  padding: 0.6rem 0.75rem;
+  padding: 0.45rem 0.55rem;
   cursor: pointer;
 }
 .lexiconNavbarFrame {
@@ -98,8 +120,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
-  padding: 2.5rem 1.6rem;
+  gap: 1.25rem;
+  padding: 1rem;
   background: #f4faf8;
 }
 .leftSideBarMenu ul {
@@ -109,7 +131,7 @@ body {
   gap: 1rem;
 }
 .leftSideBarMenu button {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   gap: 0.9rem;
@@ -126,8 +148,7 @@ body {
   white-space: nowrap;
 }
 .leftSideBarMenu img {
-  width: 1.4rem;
-  height: 1.4rem;
+  max-width: 100%;
   object-fit: contain;
 }
 .leftSideBarMenu li:first-child button {
@@ -139,10 +160,10 @@ body {
   background: rgba(255, 255, 255, 0.8);
 }
 .leftSideBarNews {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .leftSideBarNews img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 1.25rem;
   box-shadow: 0 1.1rem 2.2rem rgba(3, 86, 72, 0.1);
 }
@@ -160,14 +181,12 @@ body {
   border-radius: 0.75rem;
 }
 .leftSideBar > button img {
-  width: 1.25rem;
-  height: 1.25rem;
+  max-width: 100%;
 }
 .leftSideBar > button span {
   font-size: 0.92rem;
 }
 
-/* center */
 .centerBar {
   grid-area: main;
   background: #f3fbf9;
@@ -184,9 +203,9 @@ body {
 .centerBarSearch .searchBar {
   display: flex;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   border-radius: 999rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.1rem;
   background: linear-gradient(180deg, #f4fdfb 0%, #e7f7f3 100%);
   border: 0.0625rem solid rgba(178, 215, 208, 0.85);
   box-shadow: inset 0 0.05rem 0 rgba(255, 255, 255, 0.9);
@@ -195,8 +214,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.6rem;
-  height: 2.6rem;
+  max-width: 100%;
   border-radius: 50%;
   border: none;
   background: transparent;
@@ -242,7 +260,7 @@ body {
 }
 .articlesTabs {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   border-bottom: 0.0625rem solid #e4f0ef;
   padding-bottom: 0.25rem;
   overflow-x: auto;
@@ -266,7 +284,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 70%;
+  max-width: 100%;
   height: 0.1875rem;
   background: #06b7a1;
   border-radius: 999rem;
@@ -274,7 +292,7 @@ body {
 .articlesGrid {
   margin-top: 1.1rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.1rem 1.5rem;
 }
 .articlesColumn {
@@ -295,14 +313,15 @@ body {
   color: inherit;
 }
 .articleCardLarge {
-  height: 10rem;
+  height: auto;
 }
 .articleCardLarge .articleCardImageWrapper {
-  width: 42%;
+  max-width: 100%;
+  padding: 1.2rem;
 }
 .articleCardLarge img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 .articleCardLarge .articleCardContent {
@@ -315,10 +334,9 @@ body {
   height: 4.2rem;
 }
 .articleCardSmall .articleCardThumbnail {
-  width: 4rem;
+  max-width: 100%;
+  padding: 0.5rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .articleCardSmall .articleCardThumbnail img {
   width: 3rem;
@@ -347,7 +365,7 @@ body {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.25rem;
 }
 .sectionHeader {
@@ -425,6 +443,7 @@ body {
 
 .centerBarBanner img {
   width: 100%;
+  height: auto;
   border-radius: 1.4rem;
   box-shadow: 0 18px 32px rgba(3, 86, 72, 0.06);
 }
@@ -504,6 +523,7 @@ body {
 }
 
 .rightSideBarCalculator {
+  max-width: 100%;
   padding: 0;
   margin-top: 0.25rem;
 }
@@ -552,7 +572,7 @@ body {
   margin-bottom: 0.8rem;
 }
 .calcInput {
-  width: 100%;
+  max-width: 100%;
   border: 0.0625rem solid #d7e7e5;
   background: #f9fbfb;
   border-radius: 0.8rem;
@@ -579,7 +599,7 @@ body {
   margin-bottom: 1rem;
 }
 .calcSelect {
-  width: 100%;
+  max-width: 100%;
   border: 0.0625rem solid #d7e7e5;
   background: #f9fbfb;
   border-radius: 0.8rem;
@@ -610,6 +630,7 @@ body {
 }
 
 .rightSideBarOtherArticles {
+  max-width: 100%;
   position: relative;
   padding-top: 0.4rem;
 }
@@ -655,92 +676,110 @@ body {
 /* right banners */
 .rightSideBarFirstBanner img,
 .rightSideBarSecondBanner img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 1.2rem;
   box-shadow: 0 1.4rem 2.4rem rgba(3, 86, 72, 0.08);
 }
 
-/* responsive */
-@media (max-width: 1240px) {
-  body {
-    grid-template-columns: 16rem minmax(0, 1fr) 20rem;
-  }
-  .centerBar {
-    padding: 1rem 1.2rem 1.5rem;
-  }
-  .articlesGrid {
-    gap: 1rem 1.2rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  body {
-    grid-template-columns: 14rem minmax(0, 1fr) 19rem;
-  }
-  .articlesGrid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .centerBarOther {
-    grid-template-columns: 1fr 1fr;
-  }
-  .rightSidesearchBarSelect {
-    display: none;
-  }
-}
-
-@media (max-width: 900px) {
-  body {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "right"
-      "main"
-      "left";
-  }
-  .leftSideBar,
-  .rightSideBar,
-  .centerBar {
-    padding: 1rem;
-  }
-  .rightSideBar {
-    gap: 1rem;
-  }
-  .centerBarArticles {
-    margin-bottom: 1rem;
-  }
-  .articlesGrid {
-    grid-template-columns: 1fr;
-  }
-  .centerBarOther {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 560px) {
-  :root {
-    font-size: 15px;
-  }
+@media (min-width: 560px) {
   .lexiconNavbar {
-    padding: 0.9rem 1rem;
+    padding: 1.2rem 2rem;
   }
   .lexiconNavbarContentHeadingTitle {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
-  .leftSideBar {
-    gap: 1.25rem;
-    padding: 1rem;
+
+  .articlesTabs {
+    gap: 1.5rem;
   }
-  .leftSideBarNews {
-    margin-top: 1rem;
+  .articlesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem 1.5rem;
   }
-  .rightSideCardTitle {
-    font-size: 1rem;
+  .centerBar {
+    padding: 1.25rem 2rem 2rem;
   }
-  .calcButton {
-    width: 100%;
-  }
+
   .chipsNext {
     display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "header header"
+      "left   main"
+      "right  main";
+  }
+  .lexiconNavbar {
+    padding: 1.2rem 2rem;
+  }
+
+  .lexiconNavbarContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .lexiconNavbarContentHeading {
+    margin-left: 1.2rem;
+  }
+
+  .lexiconNavbarContentHeadingTitle {
+    font-size: 1.6rem;
+  }
+
+  .lexiconNavbarContentHeadingSubtitle {
+    font-size: 0.875rem;
+  }
+
+  .lexiconNavbarContentMenu ul {
+    gap: 1rem;
+  }
+
+  .lexiconNavbarContentMenu button {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .articlesHeaderNext {
+    display: inline-block;
+  }
+  .sectionHeaderArrow {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    grid-template-columns: 18rem minmax(0, 1fr) 22rem;
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas:
+      "header header header"
+      "left   main   right";
+  }
+
+  .leftSideBar {
+    gap: 2rem;
+    padding: 2.5rem 1.6rem;
+  }
+  .leftSideBarNews {
+    margin-top: 2rem;
+  }
+
+  .rightSideCardTitle {
+    font-size: 1.1rem;
+  }
+
+  .calcButton {
+    width: 7.5rem;
+  }
+
+  .centerBarOther {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
