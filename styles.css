@@ -29,9 +29,9 @@ body {
   grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "header"
+    "left"
     "main"
-    "right"
-    "left";
+    "right";
   background: #f4faf8;
   font-family: "Poppins", sans-serif;
   gap: 0;
